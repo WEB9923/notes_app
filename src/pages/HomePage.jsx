@@ -43,9 +43,9 @@ export default function HomePage() {
                      </Link>}
                   />
                   <Button
-                     content={<Link to={"/settings"} className="w-full h-full flex items-center justify-center">
+                     content={
                         <AiOutlineSetting size={20}/>
-                     </Link>}
+                     }
                   />
                </div>
             </Header>

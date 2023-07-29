@@ -9,6 +9,30 @@
     @apply text-txt-redText;
 }
 
+.checkbox{
+    @apply relative
+    w-12
+    h-7
+    rounded-full
+    appearance-none
+    bg-bg-lighter
+    before:absolute
+    before:top-1/2
+    before:transform
+    before:-translate-y-1/2
+    before:bg-bg-darker
+    before:left-1
+    transition-all
+    duration-300
+    before:transition-all
+    before:duration-300
+    before:w-6
+    before:h-6
+    before:rounded-full
+    before:checked:bg-txt-greenText
+    checked:before:left-[calc(48px-24px-4px)];
+}
+
 *{
     margin:0;
     padding:0;
