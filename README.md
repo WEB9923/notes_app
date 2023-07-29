@@ -1,3 +1,3 @@
 # notes app with reactJs
 
-To run the project clone the project, open a terminal, open two windows, in one window run the command npm run dev, in the other npm run server
+პროექტის გასაშვებად გამომდინარე იქედან რომ გამოყენებულია json-server საჭიროა ლოკალურად გაშვება. პროექტის გასაშვებად დაკლონეთ პროქტი. შემდეგ შედით ამავე დირექტორიაში და გახსენით ტერმინალი, გაუშვით ორი ბრძანება {npm run dev} და {npm run server} და პროექტი დაისტარტება... მისამართი - http://localhost:3005/
