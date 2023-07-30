@@ -1,12 +1,13 @@
 import {RouterProvider} from "react-router-dom";
 import {Routes} from "./routes/Routes.jsx";
-
+import {ThemeContextProvider} from "./store/ThemeContext.jsx";
 
 export default function App() {
-
   return (
     <>
-      <RouterProvider router={Routes}/>
+       <ThemeContextProvider>
+          <RouterProvider router={Routes}/>
+       </ThemeContextProvider>
     </>
   )
 }

@@ -34,11 +34,11 @@ export default function NoteItem({data, index}) {
                <div>
                   <p className="line-clamp-2 text-txt-lighter font-medium text-sm">{data?.["note-content"]}</p>
                </div>
-               <div className="flex gap-4 items-center mt-1">
-                  <p className="text-xs text-txt-inputText font-light gap-x-0.5 flex items-center"><RiMenuAddLine
+               <div className="flex gap-2 items-center mt-1">
+                  <p className="text-xs text-txt-inputText py-0.5 px-1.5 rounded-md bg-bg-darker w-fit font-medium gap-x-0.5 flex items-center"><RiMenuAddLine
                      size={16}/>{data?.["createdAt"]}</p>
                   {data?.["is-edited"] && <><p
-                     className="text-xs text-txt-inputText font-light gap-x-0.5 flex items-center"><MdUpdate
+                     className="text-xs text-txt-inputText py-0.5 px-1.5 rounded-md bg-bg-darker w-fit font-medium gap-x-0.5 flex items-center"><MdUpdate
                      size={17}/> {data?.updatedAt}</p></>}
                </div>
             </Link>

@@ -3,18 +3,25 @@ import Button from "../components/Button.jsx";
 import {BiSearch} from "react-icons/bi";
 import {Link} from "react-router-dom";
 import {AiOutlineSetting} from "react-icons/ai";
-import {useEffect, useState} from "react";
+import {useContext, useEffect, useState} from "react";
 import {getAllNote} from "../services/API.js";
 import NoteItem from "../components/NoteItem.jsx";
 import firstNoteImage from "../assets/first-note.svg";
 import {LuEdit} from "react-icons/lu";
-import {motion} from "framer-motion";
+import {AnimatePresence, motion} from "framer-motion";
 import {ButtonTouchAnimation} from "../animations/ButtonTouchAnimation.js";
 import Wrapper from "../components/Wrapper.jsx";
+import Settings from "../components/Settings.jsx";
+import {ThemeContext} from "../store/ThemeContext.jsx";
 
 export default function HomePage() {
    const [notes, setNotes] = useState([]);
 
+   const ctx = useContext(ThemeContext);
+
+   const {handleChangeTheme} = ctx;
+   const {isLightTheme} = ctx;
+   console.log(isLightTheme)
    const getAll = async () => {
       try {
          return await getAllNote();
@@ -48,6 +55,12 @@ export default function HomePage() {
                      }
                   />
                </div>
+               <AnimatePresence>
+                  <Settings
+                     handleChangeTheme={handleChangeTheme}
+                     isLightTheme={isLightTheme}
+                  />
+               </AnimatePresence>
             </Header>
             <Wrapper>
                {notes === undefined ||

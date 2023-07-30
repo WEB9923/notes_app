@@ -14,7 +14,7 @@ export default {
       txt: {
         lighter: "#725dda",
         darker: "#5241a4",
-        inputText: "#594c91",
+        inputText: "#776ab0",
         redText: "#b25b5b",
         greenText: "#759047"
       },
